@@ -1,30 +1,54 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <div class="app-wrapper">
+    <!-- Navbar sempre in alto -->
+    <AppNavbar />
+
+    <!-- Contenuto dinamico (cresce) -->
+    <div class="page-content">
+      <router-view />
+    </div>
+
+    <!-- Footer sempre in basso -->
+    <AppFooter />
+  </div>
 </template>
 
+<script>
+import AppNavbar from "./components/Navbar.vue";
+import AppFooter from "./components/Footer.vue";
+
+export default {
+  name: "App",
+  components: {
+    AppNavbar,
+    AppFooter,
+  },
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+:root {
+  --cream: #f7efe7;
 }
 
-nav {
-  padding: 30px;
+/* wrapper flessibile a colonna */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* altezza intera viewport */
+  background-color: var(--cream);
+  margin: 0;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+/* questa sezione occupa tutto lo spazio disponibile
+   e spinge il footer in basso */
+.page-content {
+  flex: 1;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+/* reset body */
+body {
+  margin: 0;
+  background-color: var(--cream);
 }
 </style>

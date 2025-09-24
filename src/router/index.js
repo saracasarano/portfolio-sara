@@ -1,26 +1,22 @@
+// src/router/index.js
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import GraficheView from "../views/GraficheView.vue";
+import ProgettiView from "../views/ProgettiView.vue";
+import ContattiView from "../views/ContattiView.vue";
+import ForumView from "../views/ForumView.vue";
+import CarrelloView from "../views/CarrelloView.vue"; // 🔹 importa anche CarrelloView
 
 const routes = [
-  {
-    path: "/",
-    name: "home",
-    component: HomeView,
-  },
-  {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
-  },
+  { path: "/", component: HomeView },
+  { path: "/grafiche", component: GraficheView },
+  { path: "/progetti", component: ProgettiView },
+  { path: "/contatti", component: ContattiView },
+  { path: "/forum", component: ForumView },
+  { path: "/carrello", component: CarrelloView }, // 🔹 aggiungi la rotta carrello
 ];
 
-const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+export default createRouter({
+  history: createWebHistory(),
   routes,
 });
-
-export default router;
