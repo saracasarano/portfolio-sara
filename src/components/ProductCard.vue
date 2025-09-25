@@ -43,7 +43,6 @@ export default {
   color: var(--bordeaux);
 }
 
-/* bottoni */
 .btn-bordeaux {
   background-color: var(--bordeaux);
   border: 2px solid var(--cream);
@@ -67,7 +66,6 @@ export default {
   color: var(--cream);
 }
 
-/* card */
 .card {
   border: 2px solid var(--bordeaux);
 }
@@ -89,14 +87,12 @@ export default {
   border-top-right-radius: 15px;
 }
 
-/* su tablet aumenta un po’ l’altezza */
 @media (min-width: 992px) {
   .card-img-top {
     height: 250px;
   }
 }
 
-/* su desktop grandi ancora più alta */
 @media (min-width: 1400px) {
   .card-img-top {
     height: 300px;
