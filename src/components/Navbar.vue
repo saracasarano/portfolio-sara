@@ -64,28 +64,25 @@ export default {
 
 <style scoped>
 :root {
-  --cream-dark: #e6d9c8; /* crema scuro */
+  --cream-dark: #e6d9c8;
   --bordeaux: #812843;
 }
 
-/* sfondo crema scuro alla navbar */
 .bg-cream-dark {
   background-color: var(--cream-dark) !important;
 }
 
-/* logo nella navbar */
 .logo-nav {
   height: 50px;
   width: auto;
   display: block;
 }
 
-/* link della navbar su sfondo crema */
 .navbar .nav-link {
   color: var(--bordeaux) !important;
   font-weight: 600;
 }
 .navbar .nav-link:hover {
-  color: #a13c5f !important; /* bordeaux più chiaro */
+  color: #a13c5f !important;
 }
 </style>
