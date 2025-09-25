@@ -5,7 +5,7 @@ import GraficheView from "../views/GraficheView.vue";
 import ProgettiView from "../views/ProgettiView.vue";
 import ContattiView from "../views/ContattiView.vue";
 import ForumView from "../views/ForumView.vue";
-import CarrelloView from "../views/CarrelloView.vue"; // 🔹 importa anche CarrelloView
+import CarrelloView from "../views/CarrelloView.vue";
 
 const routes = [
   { path: "/", component: HomeView },
@@ -13,7 +13,7 @@ const routes = [
   { path: "/progetti", component: ProgettiView },
   { path: "/contatti", component: ContattiView },
   { path: "/forum", component: ForumView },
-  { path: "/carrello", component: CarrelloView }, // 🔹 aggiungi la rotta carrello
+  { path: "/carrello", component: CarrelloView },
 ];
 
 export default createRouter({
