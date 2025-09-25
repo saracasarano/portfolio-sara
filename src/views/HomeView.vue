@@ -7,7 +7,7 @@
           Creo esperienze visive uniche attraverso un design moderno e
           funzionale.
         </p>
-        <router-link to="/progetti" class="btn btn-bordeaux mt-3">
+        <router-link to="/progetti" class="btn btn-bordeaux btn-lg mt-3">
           Let's get started →
         </router-link>
       </div>
