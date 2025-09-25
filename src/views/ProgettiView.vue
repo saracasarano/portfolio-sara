@@ -1,6 +1,5 @@
 <template>
   <div class="container my-5">
-    <!-- Titolo e intro -->
     <h1 class="text-bordeaux text-center mb-4">I miei progetti</h1>
     <p class="text-center lead">
       In questo carosello sono presenti alcuni dei miei ultimi progetti.
@@ -8,7 +7,6 @@
 
     <!-- Carosello Bootstrap -->
     <div id="carouselProgetti" class="carousel slide my-4 carousel-wrapper">
-      <!-- indicatori -->
       <div class="carousel-indicators">
         <button
           v-for="(slide, idx) in slides"
@@ -22,7 +20,6 @@
         ></button>
       </div>
 
-      <!-- immagini -->
       <div class="carousel-inner">
         <div
           class="carousel-item"
@@ -34,7 +31,6 @@
         </div>
       </div>
 
-      <!-- controlli -->
       <button
         class="carousel-control-prev"
         type="button"
@@ -119,7 +115,6 @@
       </div>
     </div>
 
-    <!-- Sezione ispirazioni -->
     <aside class="ispirazioni mt-5">
       <h3>Fonti d'ispirazione</h3>
       <ul>
@@ -221,7 +216,6 @@ export default {
   color: var(--bordeaux);
 }
 
-/* wrapper carosello */
 .carousel-wrapper {
   max-width: 700px;
   margin: 0 auto;
@@ -255,7 +249,6 @@ export default {
   color: var(--bordeaux);
 }
 
-/* bottoni */
 .btn-outline-bordeaux {
   background-color: transparent;
   border: 2px solid var(--bordeaux);
@@ -267,7 +260,6 @@ export default {
   color: var(--cream);
 }
 
-/* frecce carosello bordeaux */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: var(--bordeaux);
@@ -275,7 +267,7 @@ export default {
   width: 3rem;
   height: 3rem;
   background-size: 60%;
-  filter: invert(1) brightness(2); /* freccia chiara su sfondo bordeaux */
+  filter: invert(1) brightness(2);
 }
 
 .carousel-control-prev,
@@ -283,7 +275,6 @@ export default {
   width: 5%;
 }
 
-/* sezione ispirazioni */
 .ispirazioni {
   background-color: var(--bordeaux);
   color: var(--cream);
