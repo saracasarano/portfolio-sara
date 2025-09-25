@@ -2,7 +2,7 @@
   <div class="container my-5">
     <h1 class="text-bordeaux text-center mb-4">Le mie Grafiche & Font</h1>
 
-    <!-- 🔹 Campo di ricerca -->
+    <!-- Campo di ricerca -->
     <div class="mb-4 text-center">
       <input
         v-model="query"
@@ -12,7 +12,7 @@
       />
     </div>
 
-    <!-- 🔹 Lista card -->
+    <!-- Lista card -->
     <div class="row">
       <div
         class="col-6 col-md-4 col-lg-3 mb-4"
@@ -27,13 +27,13 @@
       </div>
     </div>
 
-    <!-- 🔹 Modale Dettagli -->
+    <!-- Modale Dettagli -->
     <ProductDetailModal
       :prodotto="prodottoSelezionato"
       @add="aggiungiConNotifica"
     />
 
-    <!-- 🔹 Toast in basso a destra -->
+    <!-- Toast in basso a destra -->
     <div v-if="notifica" class="toast-custom">
       {{ notifica }}
     </div>
@@ -91,7 +91,6 @@ export default {
   color: var(--bordeaux);
 }
 
-/* stile input di ricerca */
 input.form-control {
   border: 2px solid var(--bordeaux);
   color: var(--bordeaux);
@@ -100,7 +99,6 @@ input.form-control::placeholder {
   color: #b57c8c;
 }
 
-/* 🔹 Toast personalizzato */
 .toast-custom {
   position: fixed;
   bottom: 20px;
