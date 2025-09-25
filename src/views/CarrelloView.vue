@@ -64,7 +64,6 @@ export default {
   color: var(--bordeaux);
 }
 
-/* bottone “Svuota carrello” */
 .btn-bordeaux {
   background-color: var(--bordeaux);
   border: 2px solid var(--cream);
@@ -77,14 +76,13 @@ export default {
   color: var(--bordeaux);
 }
 
-/* bottone “Rimuovi”: normale crema/testo bordeaux */
 .btn-rimuovi {
   background-color: var(--cream);
   border: 2px solid var(--bordeaux);
   color: var(--bordeaux);
   font-weight: 600;
 }
-/* hover: diventa bordeaux/testo crema */
+
 .btn-rimuovi:hover {
   background-color: var(--bordeaux);
   border-color: var(--cream);
