@@ -20,6 +20,6 @@ export default {
 .footer-custom {
   background-color: var(--cream);
   color: var(--bordeaux);
-  font-weight: 600; /* se vuoi più “bold” */
+  font-weight: 600;
 }
 </style>
