@@ -6,9 +6,9 @@ export default createStore({
       {
         id: 1,
         titolo: "Logo minimal",
-        prezzo: 20,
+        prezzo: 40,
         disponibile: true,
-        descrizione: "Logo in stile minimal perfetto per brand moderni",
+        descrizione: "Logo in stile minimal perfetto per brand moderni.",
         tipo: "Grafica",
         data: "Gennaio 2025",
         immagine: require("@/assets/logo_minimal.png"),
@@ -18,7 +18,7 @@ export default createStore({
         titolo: "Poster vintage",
         prezzo: 15,
         disponibile: false,
-        descrizione: "Poster con stile retrò anni 70",
+        descrizione: "Poster con stile retrò anni 70.",
         tipo: "Grafica",
         data: "Febbraio 2025",
         immagine: require("@/assets/poster_vintage.png"),
@@ -28,7 +28,7 @@ export default createStore({
         titolo: "Font Elegance",
         prezzo: 10,
         disponibile: true,
-        descrizione: "Font serif elegante",
+        descrizione: "Font serif elegante per design sofisticati.",
         tipo: "Font",
         data: "Marzo 2025",
         immagine: require("@/assets/font_elegance.png"),
@@ -38,7 +38,7 @@ export default createStore({
         titolo: "Font Techno",
         prezzo: 12,
         disponibile: true,
-        descrizione: "Font moderno futuristico per UI",
+        descrizione: "Font moderno futuristico per UI.",
         tipo: "Font",
         data: "Aprile 2025",
         immagine: require("@/assets/font_techno.png"),
@@ -51,7 +51,7 @@ export default createStore({
         prezzo: 25,
         disponibile: true,
         descrizione:
-          "Logo ispirato alla natura, con elementi organici e verdi.",
+          "Logo ispirato alla natura, con elementi organici e bordeaux.",
         tipo: "Grafica",
         data: "Maggio 2025",
         immagine: require("@/assets/logo_nature.png"),
@@ -109,8 +109,15 @@ export default createStore({
     },
 
     RIMUOVI_DAL_CARRELLO(state, id) {
-      state.carrello = state.carrello.filter((item) => item.id !== id);
-      localStorage.setItem("carrello", JSON.stringify(state.carrello));
+      const prodotto = state.carrello.find((item) => item.id === id);
+      if (prodotto) {
+        if (prodotto.quantità > 1) {
+          prodotto.quantità--;
+        } else {
+          state.carrello = state.carrello.filter((item) => item.id !== id);
+        }
+        localStorage.setItem("carrello", JSON.stringify(state.carrello));
+      }
     },
   },
 
