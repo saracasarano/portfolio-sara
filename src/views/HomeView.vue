@@ -1,8 +1,6 @@
 <template>
   <div class="container my-5">
-    <!-- Hero section -->
     <div class="row align-items-center">
-      <!-- Testo -->
       <div class="col-md-6 order-2 order-md-1 text-center text-md-start">
         <h1 class="display-4 text-bordeaux">Sara Casarano</h1>
         <p class="lead">
@@ -14,7 +12,6 @@
         </router-link>
       </div>
 
-      <!-- Foto -->
       <div class="col-md-6 order-1 order-md-2 text-center">
         <img
           src="@/assets/foto_personale.jpeg"
@@ -24,7 +21,6 @@
       </div>
     </div>
 
-    <!-- Sezione Chi sono -->
     <section class="about-me text-center mt-5">
       <h2 class="text-bordeaux mb-4">Chi sono</h2>
       <p class="px-md-5">
@@ -34,7 +30,6 @@
       </p>
     </section>
 
-    <!-- Skills -->
     <section class="skills text-center mt-5">
       <h2 class="text-bordeaux mb-4">Skills Visive</h2>
       <div class="row">
@@ -137,7 +132,6 @@ h2,
   }
 }
 
-/* 🔹 Card skills */
 .card {
   border: 2px solid var(--bordeaux);
 }
