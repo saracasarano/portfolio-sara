@@ -87,6 +87,9 @@ export default {
   border: 2px solid var(--cream) !important;
   color: var(--cream) !important;
   font-weight: 600;
+  font-size: 1.2rem;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
 }
 .btn-bordeaux:hover {
   background-color: #a13c5f !important;
@@ -134,7 +137,14 @@ h2,
 
 .card {
   border: 2px solid var(--bordeaux);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 .card-body {
   background-color: var(--bordeaux);
   color: #f7efe7;
