@@ -98,7 +98,7 @@ export default {
   methods: {
     inviaForm() {
       // Qui puoi gestire l'invio del form (API, email, ecc.)
-      // Per ora mostriamo solo un messaggio di successo
+      // Per ora solo un messaggio di successo
       this.successo = true;
 
       // Resetta i campi del form
@@ -130,7 +130,6 @@ export default {
   max-width: 600px;
 }
 
-/* stile input/select/textarea */
 .form-control,
 .form-select {
   border: 2px solid var(--bordeaux);
@@ -144,7 +143,6 @@ export default {
   border-color: var(--bordeaux);
 }
 
-/* bottone */
 .btn-bordeaux {
   background-color: var(--bordeaux);
   border: 2px solid var(--cream);
